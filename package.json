@@ -1,11 +1,11 @@
 {
   "name": "@derschmale/array-utils",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "build/array-utils.js",
   "module": "build/array-utils.module.js",
   "types": "./build/types/main.d.ts",
   "files": [
-    "build/**/*.js",
+    "build/**/*",
     "README.md",
     "LICENSE",
     "src"

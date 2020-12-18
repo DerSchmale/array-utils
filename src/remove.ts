@@ -12,6 +12,10 @@ export function removeIndexOutOfOrder<T>(target: Array<T>, index: number): numbe
     return index;
 }
 
+/**
+ * Unsafely removes an item by removing the last item and inserting it in its place. Should only be used when the
+ * order of elements is not important. It returns the index of the object that was removed.
+ */
 export function removeElementOutOfOrder<T>(target: Array<T>, elm: T): number
 {
     const last = target.pop();

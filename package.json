@@ -1,8 +1,8 @@
 {
   "name": "@derschmale/array-utils",
-  "version": "1.0.0",
-  "main": "src/array-utils.js",
-  "module": "build/array-utils.js",
+  "version": "1.0.1",
+  "main": "build/array-utils.js",
+  "module": "build/array-utils.module.js",
   "types": "./build/types/main.d.ts",
   "files": [
     "build/**/*.js",

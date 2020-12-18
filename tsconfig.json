@@ -16,8 +16,7 @@
     ]
   },
   "include": [
-    "src/**/*",
-    "node_modules/lzut8/src/**/*"
+    "src/**/*"
   ],
   "exclude": [
     "node_modules",

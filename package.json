@@ -7,8 +7,7 @@
   "files": [
     "build/**/*",
     "README.md",
-    "LICENSE",
-    "src"
+    "LICENSE"
   ],
   "repository": {
     "type": "git",

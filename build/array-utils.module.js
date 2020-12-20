@@ -27,6 +27,23 @@ function removeIndexOutOfOrder(target, index) {
         target[index] = last;
     return index;
 }
+/**
+ * Removes multiple indices out of order.
+ */
+function removeIndicesOutOfOrder(target, indices) {
+    // sorting them in descending order makes them easy to delete optimally. Make sure not to modify the original
+    // array, we don't know if it's still used.
+    var sorted = indices.slice().sort(function (a, b) { return b - a; });
+    for (var _i = 0, sorted_1 = sorted; _i < sorted_1.length; _i++) {
+        var i = sorted_1[_i];
+        removeIndexOutOfOrder(target, sorted[i]);
+    }
+    return target;
+}
+/**
+ * Unsafely removes an item by removing the last item and inserting it in its place. Should only be used when the
+ * order of elements is not important. It returns the index of the object that was removed.
+ */
 function removeElementOutOfOrder(target, elm) {
     var last = target.pop();
     if (last === elm) {
@@ -43,4 +60,4 @@ function removeElementOutOfOrder(target, elm) {
     }
 }
 
-export { removeElementOutOfOrder, removeIndexOutOfOrder, shuffle };
+export { removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };

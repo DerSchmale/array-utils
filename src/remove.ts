@@ -13,6 +13,22 @@ export function removeIndexOutOfOrder<T>(target: Array<T>, index: number): numbe
 }
 
 /**
+ * Removes multiple indices out of order.
+ */
+export function removeIndicesOutOfOrder<T>(target: Array<T>, indices: number[])
+{
+    // sorting them in descending order makes them easy to delete optimally. Make sure not to modify the original
+    // array, we don't know if it's still used.
+    const sorted = indices.slice().sort((a, b) => b - a);
+
+    for (let i of sorted) {
+        removeIndexOutOfOrder(target, sorted[i]);
+    }
+
+    return target;
+}
+
+/**
  * Unsafely removes an item by removing the last item and inserting it in its place. Should only be used when the
  * order of elements is not important. It returns the index of the object that was removed.
  */

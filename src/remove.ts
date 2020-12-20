@@ -22,7 +22,7 @@ export function removeIndicesOutOfOrder<T>(target: Array<T>, indices: number[])
     const sorted = indices.slice().sort((a, b) => b - a);
 
     for (let i of sorted) {
-        removeIndexOutOfOrder(target, sorted[i]);
+        removeIndexOutOfOrder(target, i);
     }
 
     return target;

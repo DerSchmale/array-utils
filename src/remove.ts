@@ -5,9 +5,10 @@
 export function removeIndexOutOfOrder<T>(target: Array<T>, index: number): number
 {
     console.assert(index < target.length, "Index out of bounds!");
-    const orig = target[index];
     const last = target.pop();
-    if (target.length > 0 && orig !== last)
+
+    // do not remove if it was the last element
+    if (target.length !== index)
         target[index] = last;
 
     return index;

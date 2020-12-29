@@ -26,7 +26,8 @@ var TYMP = (function (exports) {
     function removeIndexOutOfOrder(target, index) {
         console.assert(index < target.length, "Index out of bounds!");
         var last = target.pop();
-        if (target.length > 0 && last !== target[index])
+        // do not remove if it was the last element
+        if (target.length !== index)
             target[index] = last;
         return index;
     }

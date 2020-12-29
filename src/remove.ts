@@ -6,7 +6,7 @@ export function removeIndexOutOfOrder<T>(target: Array<T>, index: number): numbe
 {
     console.assert(index < target.length, "Index out of bounds!");
     const last = target.pop();
-    if (target.length > 0 && last !== target[index])
+    if (target.length > 0)
         target[index] = last;
 
     return index;

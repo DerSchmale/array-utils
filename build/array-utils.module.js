@@ -61,4 +61,12 @@ function removeElementOutOfOrder(target, elm) {
     }
 }
 
-export { removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };
+function createWith(length, creator) {
+    var arr = new Array(length);
+    for (var i = 0; i < length; ++i) {
+        arr[i] = creator(i);
+    }
+    return arr;
+}
+
+export { createWith, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };

@@ -13,3 +13,5 @@ Run `npm install` and `npm run build`.
 - `removeElementOutOfOrder`: Unsafely removes an item by removing the last item and inserting it in its place. Should 
   only be used when the order of elements is not important. It returns the index of the object that was removed.
 - `shuffle`: Randomizes the order of the elements in the array.
+- `createWith`: Creates a new array of a given length and initializes every element using the return value of a 
+  callback function.

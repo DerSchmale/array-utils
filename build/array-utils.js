@@ -64,6 +64,15 @@ var TYMP = (function (exports) {
         }
     }
 
+    function createWith(length, creator) {
+        var arr = new Array(length);
+        for (var i = 0; i < length; ++i) {
+            arr[i] = creator(i);
+        }
+        return arr;
+    }
+
+    exports.createWith = createWith;
     exports.removeElementOutOfOrder = removeElementOutOfOrder;
     exports.removeIndexOutOfOrder = removeIndexOutOfOrder;
     exports.removeIndicesOutOfOrder = removeIndicesOutOfOrder;

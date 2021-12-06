@@ -72,7 +72,13 @@ var TYMP = (function (exports) {
         return arr;
     }
 
+    function pickRandom(array) {
+        var i = Math.floor(array.length * Math.random());
+        return array[i];
+    }
+
     exports.createWith = createWith;
+    exports.pickRandom = pickRandom;
     exports.removeElementOutOfOrder = removeElementOutOfOrder;
     exports.removeIndexOutOfOrder = removeIndexOutOfOrder;
     exports.removeIndicesOutOfOrder = removeIndicesOutOfOrder;

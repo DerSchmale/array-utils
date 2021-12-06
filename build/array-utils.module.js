@@ -69,4 +69,9 @@ function createWith(length, creator) {
     return arr;
 }
 
-export { createWith, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };
+function pickRandom(array) {
+    var i = Math.floor(array.length * Math.random());
+    return array[i];
+}
+
+export { createWith, pickRandom, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };

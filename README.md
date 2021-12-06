@@ -15,3 +15,4 @@ Run `npm install` and `npm run build`.
 - `shuffle`: Randomizes the order of the elements in the array.
 - `createWith`: Creates a new array of a given length and initializes every element using the return value of a 
   callback function.
+- `pickRandom`: Returns a random element from the array.

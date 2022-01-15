@@ -1,4 +1,3 @@
-/**
- * Randomizes the order of the elements in the array.
- */
+import { TypedArray } from "./types";
 export declare function shuffle<T>(array: T[]): T[];
+export declare function shuffle(array: TypedArray): TypedArray;

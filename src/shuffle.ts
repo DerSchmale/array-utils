@@ -1,7 +1,12 @@
+import { TypedArray } from "./types";
+
+export function shuffle<T>(array: T[]): T[];
+export function shuffle(array: TypedArray): TypedArray;
+
 /**
  * Randomizes the order of the elements in the array.
  */
-export function shuffle<T>(array: T[]): T[]
+export function shuffle(array: any): any
 {
     let currentIndex = array.length, temporaryValue, randomIndex;
 

@@ -74,4 +74,20 @@ function pickRandom(array) {
     return array[i];
 }
 
-export { createWith, pickRandom, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle };
+/**
+ * Replaces every element element of an array with the result of a transformation function.
+ *
+ * @param target The Array to transform.
+ * @param func A function that takes the current element and returns the new value.
+ * @param start An optional start index into the array. Defaults to 0.
+ * @param end An optional end index into the array. Defaults to the length of the array.
+ */
+function transform(target, func, start, end) {
+    if (start === void 0) { start = 0; }
+    if (end === void 0) { end = target.length; }
+    for (var i = start; i < end; ++i) {
+        target[i] = func[i];
+    }
+}
+
+export { createWith, pickRandom, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };

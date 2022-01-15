@@ -1,7 +1,7 @@
 import { TypedArray } from "./types";
 
-export function transform<T>(target: Array<T>, func: (e: T) => T, start: number, end: number);
-export function transform(target: TypedArray, func: (e: number) => number, start: number, end: number);
+export function transform<T>(target: Array<T>, func: (e: T) => T, start?: number, end?: number);
+export function transform(target: TypedArray, func: (e: number) => number, start?: number, end?: number);
 
 /**
  * Replaces every element element of an array with the result of a transformation function.

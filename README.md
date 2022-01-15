@@ -16,3 +16,4 @@ Run `npm install` and `npm run build`.
 - `createWith`: Creates a new array of a given length and initializes every element using the return value of a 
   callback function.
 - `pickRandom`: Returns a random element from the array.
+- `transform`: Replaces every element of an array in-place using a transform function.

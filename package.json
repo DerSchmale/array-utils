@@ -29,9 +29,7 @@
     "typescript": "^4.1.3"
   },
   "keywords": [
-    "helix3d",
-    "3d",
-    "geometry",
-    "hull"
+    "array",
+    "utils"
   ]
 }

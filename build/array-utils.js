@@ -1,4 +1,4 @@
-var TYMP = (function (exports) {
+var ArrayUtils = (function (exports) {
     'use strict';
 
     /**
@@ -111,7 +111,19 @@ var TYMP = (function (exports) {
         }
     }
 
+    function equals(a, b) {
+        var length = a.length;
+        if (a.length !== b.length)
+            return false;
+        for (var i = 0; i < length; ++i) {
+            if (a[i] !== b[i])
+                return false;
+        }
+        return true;
+    }
+
     exports.createWith = createWith;
+    exports.equals = equals;
     exports.pickRandom = pickRandom;
     exports.removeAllElements = removeAllElements;
     exports.removeElementOutOfOrder = removeElementOutOfOrder;

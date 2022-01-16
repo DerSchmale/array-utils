@@ -6,7 +6,7 @@ export default [{
         {
             file: "build/array-utils.js",
             format: "iife",
-            name: "TYMP" // the global which can be used in a browser
+            name: "ArrayUtils" // the global which can be used in a browser
         },
         {
             file: "build/array-utils.module.js",

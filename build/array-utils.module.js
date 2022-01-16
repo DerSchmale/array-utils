@@ -108,4 +108,15 @@ function transform(target, func, start, end) {
     }
 }
 
-export { createWith, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };
+function equals(a, b) {
+    var length = a.length;
+    if (a.length !== b.length)
+        return false;
+    for (var i = 0; i < length; ++i) {
+        if (a[i] !== b[i])
+            return false;
+    }
+    return true;
+}
+
+export { createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };

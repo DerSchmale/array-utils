@@ -119,4 +119,11 @@ function equals(a, b) {
     return true;
 }
 
-export { createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };
+/**
+ * Returns the number of elements in a (sparse) Array.
+ */
+function count(arr) {
+    return arr.reduce(function (x) { return x + 1; }, 0);
+}
+
+export { count, createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };

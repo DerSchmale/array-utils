@@ -4,3 +4,4 @@ export * from "./create";
 export * from "./pickRandom";
 export * from "./transform";
 export * from "./compare";
+export * from "./count";

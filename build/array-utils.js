@@ -122,6 +122,14 @@ var ArrayUtils = (function (exports) {
         return true;
     }
 
+    /**
+     * Returns the number of elements in a (sparse) Array.
+     */
+    function count(arr) {
+        return arr.reduce(function (x) { return x + 1; }, 0);
+    }
+
+    exports.count = count;
     exports.createWith = createWith;
     exports.equals = equals;
     exports.pickRandom = pickRandom;

@@ -19,3 +19,4 @@ Run `npm install` and `npm run build`.
   callback function.
 - `pickRandom`: Returns a random element from the array.
 - `transform`: Replaces every element of an array in-place using a transform function.
+- `equals`: Checks if two arrays are equal.

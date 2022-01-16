@@ -63,6 +63,24 @@ var TYMP = (function (exports) {
             return index;
         }
     }
+    /**
+     * Removes all elements from the array with the given value, keeping the order.
+     */
+    function removeAllElements(target, value) {
+        for (var index = target.indexOf(value); index >= 0; index = target.indexOf(value)) {
+            target.splice(index, 1);
+        }
+    }
+    /**
+     * Removes all elements for which the predicate function returns true.
+     */
+    function removeIf(target, func) {
+        // loop backwards
+        for (var index = target.length - 1; index >= 0; --index) {
+            if (func(target[index]))
+                target.splice(index, 1);
+        }
+    }
 
     function createWith(length, creator) {
         var arr = new Array(length);
@@ -95,7 +113,9 @@ var TYMP = (function (exports) {
 
     exports.createWith = createWith;
     exports.pickRandom = pickRandom;
+    exports.removeAllElements = removeAllElements;
     exports.removeElementOutOfOrder = removeElementOutOfOrder;
+    exports.removeIf = removeIf;
     exports.removeIndexOutOfOrder = removeIndexOutOfOrder;
     exports.removeIndicesOutOfOrder = removeIndicesOutOfOrder;
     exports.shuffle = shuffle;

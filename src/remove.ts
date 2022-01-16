@@ -53,3 +53,25 @@ export function removeElementOutOfOrder<T>(target: Array<T>, elm: T): number
         return index;
     }
 }
+
+/**
+ * Removes all elements from the array with the given value, keeping the order.
+ */
+export function removeAllElements<T>(target: Array<T>, value: T)
+{
+    for (let index = target.indexOf(value); index >= 0; index = target.indexOf(value)) {
+        target.splice(index, 1);
+    }
+}
+
+/**
+ * Removes all elements for which the predicate function returns true.
+ */
+export function removeIf<T>(target: Array<T>, func: (T) => boolean)
+{
+    // loop backwards
+    for (let index = target.length - 1; index >= 0; --index) {
+        if (func(target[index]))
+            target.splice(index, 1);
+    }
+}

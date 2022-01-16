@@ -12,3 +12,11 @@ export declare function removeIndicesOutOfOrder<T>(target: Array<T>, indices: nu
  * order of elements is not important. It returns the index of the object that was removed.
  */
 export declare function removeElementOutOfOrder<T>(target: Array<T>, elm: T): number;
+/**
+ * Removes all elements from the array with the given value, keeping the order.
+ */
+export declare function removeAllElements<T>(target: Array<T>, value: T): void;
+/**
+ * Removes all elements for which the predicate function returns true.
+ */
+export declare function removeIf<T>(target: Array<T>, func: (T: any) => boolean): void;

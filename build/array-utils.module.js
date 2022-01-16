@@ -60,6 +60,24 @@ function removeElementOutOfOrder(target, elm) {
         return index;
     }
 }
+/**
+ * Removes all elements from the array with the given value, keeping the order.
+ */
+function removeAllElements(target, value) {
+    for (var index = target.indexOf(value); index >= 0; index = target.indexOf(value)) {
+        target.splice(index, 1);
+    }
+}
+/**
+ * Removes all elements for which the predicate function returns true.
+ */
+function removeIf(target, func) {
+    // loop backwards
+    for (var index = target.length - 1; index >= 0; --index) {
+        if (func(target[index]))
+            target.splice(index, 1);
+    }
+}
 
 function createWith(length, creator) {
     var arr = new Array(length);
@@ -90,4 +108,4 @@ function transform(target, func, start, end) {
     }
 }
 
-export { createWith, pickRandom, removeElementOutOfOrder, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };
+export { createWith, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };

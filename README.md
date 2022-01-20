@@ -21,3 +21,4 @@ Run `npm install` and `npm run build`.
 - `transform`: Replaces every element of an array in-place using a transform function.
 - `equals`: Checks if two arrays are equal.
 - `count`: Returns the number of elements in a (sparse) Array.
+- `unique`: Returns a new array with unique values from the original array (ie: duplicates removed).

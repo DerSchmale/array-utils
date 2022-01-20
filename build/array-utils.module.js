@@ -126,4 +126,25 @@ function count(arr) {
     return arr.reduce(function (x) { return x + 1; }, 0);
 }
 
-export { count, createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform };
+/**
+ * Returns a new array with unique values from the original array (ie: duplicates removed).
+ *
+ * @param arr The array to be filtered.
+ * @param clone An optional boolean to indicate that the original array should be cloned. If not set to true, the
+ * original array will be sorted!
+ * @param compareFunc An optional compare function. Required if the array does not contain primitives. Sort function
+ * is the same as a regular array sort function, where 0 is returned when the elements are considered equal.
+ */
+function unique(arr, clone, compareFunc) {
+    if (clone === void 0) { clone = false; }
+    if (clone)
+        arr = arr.concat();
+    var filter;
+    if (compareFunc)
+        filter = function (elm, i) { return !i || compareFunc(arr[i], arr[i - 1]); };
+    else
+        filter = function (elm, i) { return !i || elm !== arr[i - 1]; };
+    return arr.sort(compareFunc).filter(filter);
+}
+
+export { count, createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform, unique };

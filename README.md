@@ -22,3 +22,5 @@ Run `npm install` and `npm run build`.
 - `equals`: Checks if two arrays are equal.
 - `count`: Returns the number of elements in a (sparse) Array.
 - `unique`: Returns a new array with unique values from the original array (ie: duplicates removed).
+- `zip`: Loops through two Arrays in lock-step and creates a new Array based on a populated with the results of calling
+  a provided function on every respective element in the provided arrays.

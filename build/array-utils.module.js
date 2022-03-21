@@ -147,4 +147,22 @@ function unique(arr, clone, compareFunc) {
     return arr.sort(compareFunc).filter(filter);
 }
 
-export { count, createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform, unique };
+/**
+ * Loops through two Arrays in lock-step and creates a new Array based on a populated with the results of calling a
+ * provided function on every respective element in the provided arrays. If the provided arrays are of different
+ * lengths, only the minimal length is used.
+ *
+ * @param a The first array
+ * @param b The second array
+ * @param merger A function that returns a new element based on two elements
+ */
+function zip(a, b, merger) {
+    var len = Math.min(a.length, b.length);
+    var arr = new Array(len);
+    for (var i = 0; i < len; ++i) {
+        arr[i] = merger(a[i], b[i]);
+    }
+    return arr;
+}
+
+export { count, createWith, equals, pickRandom, removeAllElements, removeElementOutOfOrder, removeIf, removeIndexOutOfOrder, removeIndicesOutOfOrder, shuffle, transform, unique, zip };
